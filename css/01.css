@@ -1,0 +1,153 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* Gallery Container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px;
+}
+
+/* Gallery Images */
+.gallery img {
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover Effects */
+.gallery img:hover {
+    transform: scale(1.1);
+    filter: grayscale(50%);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+
+
+
+
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+    background: linear-gradient(to bottom, #0f3460, #1a1a2e);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for 3D effect */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+/* 3D Neon Logo with Realistic Colors */
+.navbar .logo {
+    font-size: 2.0rem;
+    color: #e0e0e0; /* Softer light grey base color for the logo */
+    font-weight: bold;
+    position: relative;
+    text-shadow:
+            0 1px 1px rgba(255, 255, 255, 0.8), /* Light top shadow */
+            0 3px 3px rgba(0, 0, 0, 0.15), /* Base shadow for 3D effect */
+            0 5px 10px rgba(0, 0, 0, 0.2), /* Deeper shadow for depth */
+            0 0 10px rgba(72, 187, 255, 0.4), /* Subtle blue glow */
+            0 0 20px rgba(72, 187, 255, 0.5), /* Slightly larger blue glow */
+            0 0 30px rgba(72, 187, 255, 0.6); /* Final, wider blue glow */
+}
+
+.navbar .logo span {
+    color: #b0e0e6; /* Light aquamarine base for the highlighted text */
+    text-shadow:
+            0 1px 1px rgba(255, 255, 255, 0.8), /* Light top shadow */
+            0 3px 3px rgba(0, 0, 0, 0.15), /* Base shadow for 3D effect */
+            0 5px 10px rgba(0, 0, 0, 0.2), /* Deeper shadow for depth */
+            0 0 10px rgba(173, 216, 230, 0.4), /* Subtle aquamarine glow */
+            0 0 20px rgba(173, 216, 230, 0.5), /* Slightly larger aquamarine glow */
+            0 0 30px rgba(173, 216, 230, 0.6); /* Final, wider aquamarine glow */
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 2rem;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f538ff;
+}
+
+
+/* Main Header */
+.main-header {
+    text-align: center;
+    padding: 8rem 1rem 3rem; /* Added extra padding to offset fixed navbar */
+    color: #ffffff;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, #f538ff, #41d7ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 3px 10px rgba(245, 56, 255, 0.6); /* Neon text shadow */
+}
+
+.main-header p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #bfc0c0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    text-align: justify; /* Justify the text */
+}

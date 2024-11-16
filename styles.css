@@ -1,0 +1,420 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #1a1a2e;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    width: 100%;
+    background: linear-gradient(to bottom, #0f3460, #1a1a2e);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.4); /* Subtle shadow for 3D effect */
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+/* 3D Neon Logo with Realistic Colors */
+.navbar .logo {
+    font-size: 2.0rem;
+    color: #e0e0e0; /* Softer light grey base color for the logo */
+    font-weight: bold;
+    position: relative;
+    text-shadow: 
+        0 1px 1px rgba(255, 255, 255, 0.8), /* Light top shadow */
+        0 3px 3px rgba(0, 0, 0, 0.15), /* Base shadow for 3D effect */
+        0 5px 10px rgba(0, 0, 0, 0.2), /* Deeper shadow for depth */
+        0 0 10px rgba(72, 187, 255, 0.4), /* Subtle blue glow */
+        0 0 20px rgba(72, 187, 255, 0.5), /* Slightly larger blue glow */
+        0 0 30px rgba(72, 187, 255, 0.6); /* Final, wider blue glow */
+}
+
+.navbar .logo span {
+    color: #b0e0e6; /* Light aquamarine base for the highlighted text */
+    text-shadow: 
+        0 1px 1px rgba(255, 255, 255, 0.8), /* Light top shadow */
+        0 3px 3px rgba(0, 0, 0, 0.15), /* Base shadow for 3D effect */
+        0 5px 10px rgba(0, 0, 0, 0.2), /* Deeper shadow for depth */
+        0 0 10px rgba(173, 216, 230, 0.4), /* Subtle aquamarine glow */
+        0 0 20px rgba(173, 216, 230, 0.5), /* Slightly larger aquamarine glow */
+        0 0 30px rgba(173, 216, 230, 0.6); /* Final, wider aquamarine glow */
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+}
+
+.navbar ul li {
+    margin-left: 2rem;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f538ff;
+}
+
+/* Main Header */
+.main-header {
+    text-align: center;
+    padding: 8rem 1rem 3rem; /* Added extra padding to offset fixed navbar */
+    color: #ffffff;
+}
+
+.main-header h1 {
+    font-size: 3rem;
+    background: linear-gradient(to right, #f538ff, #41d7ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    text-shadow: 0px 3px 10px rgba(245, 56, 255, 0.6); /* Neon text shadow */
+}
+
+.main-header p {
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    color: #bfc0c0;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+    text-align: justify; /* Justify the text */
+}
+
+/* Featured Work Section */
+.featured-work {
+    text-align: center;
+    padding: 3rem 2rem;
+    margin-top: 0.1rem;
+}
+
+.featured-work h2 {
+    font-size: 2.5rem;
+    color: #ffffff;
+    text-shadow: 0px 4px 8px rgba(245, 56, 255, 0.4);
+}
+
+.featured-work h2 span {
+    color: #f538ff;
+}
+
+/* Work Cards */
+.work-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin-top: 2rem;
+    max-width: 1200px;
+}
+
+/* Card with 3D and Neon Effect */
+.card {
+    background-color: #16213e;
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    padding: 1.5rem;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 
+        0 15px 25px rgba(0, 0, 0, 0.5), /* Main shadow */
+        0 0 20px rgba(245, 56, 255, 0.6), 
+        0 0 30px rgba(65, 215, 255, 0.4); /* Neon glow */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card:hover {
+    transform: translateY(-10px); /* Lift on hover for a 3D feel */
+    box-shadow: 
+        0 20px 40px rgba(0, 0, 0, 0.6), 
+        0 0 25px rgba(245, 56, 255, 0.8), 
+        0 0 40px rgba(65, 215, 255, 0.6);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    transition: opacity 0.3s;
+}
+
+.card:hover img {
+    opacity: 0.9; /* Slightly dim the image on hover for emphasis on text */
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #ffffff;
+    text-shadow: 0px 2px 6px rgba(245, 56, 255, 0.4);
+}
+
+.card p {
+    font-size: 1rem;
+    color: #bfc0c0;
+    line-height: 1.4;
+}
+
+/* Tags with Updated Style */
+.tags {
+    margin-top: 1rem;
+}
+
+.tags span {
+    display: inline-block;
+    margin: 0.3rem;
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    background-color: rgba(245, 56, 255, 0.2);
+    color: #ffffff;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+.tags span:hover {
+    background-color: #f538ff; /* Brighten tag on hover */
+}
+
+
+
+/* 1st Page - Brand Page */
+
+
+
+.project-details {
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #bfc0c0;
+}
+
+.project-details h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+    color: #ffffff;
+    text-shadow: 0px 2px 6px rgba(245, 56, 255, 0.4);
+}
+
+.project-details ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.project-gallery img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+
+
+
+
+/* Gallery Container */
+.image-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+}
+
+/* Gallery Items */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Effect */
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+.gallery-item:hover img {
+    opacity: 0.9;
+}
+
+
+
+
+
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    border-radius: 8px;
+}
+
+#caption {
+    text-align: center;
+    color: #ccc;
+    padding: 10px 20px;
+    font-size: 1rem;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Contact Page Styling */
+
+/* Section Headers */
+.project-details h2, .social-media h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #ffffff;
+    text-shadow: 0px 4px 10px rgba(245, 56, 255, 0.5);
+    text-align: center;
+}
+
+.project-details span, .social-media span {
+    color: #f538ff;
+}
+
+/* Contact Information Section */
+.project-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto;
+    max-width: 700px;
+    text-align: center;
+}
+
+.project-details ul li {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+    color: #bfc0c0;
+}
+
+.project-details ul li a {
+    color: #41d7ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.project-details ul li a:hover {
+    color: #f538ff;
+}
+
+/* Social Media Links Section */
+.social-media {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-link {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: rgba(245, 56, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(245, 56, 255, 0.3);
+}
+
+.social-link:hover {
+    background-color: #f538ff;
+    box-shadow: 0px 6px 15px rgba(245, 56, 255, 0.6);
+    transform: scale(1.05);
+}
+
+/* Social Icons Section (Optional) */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.social-icons a img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 50%;
+    box-shadow: 0px 4px 10px rgba(245, 56, 255, 0.3);
+}
+
+.social-icons a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 15px rgba(245, 56, 255, 0.6);
+}
